@@ -1,0 +1,16 @@
+<div style="height: 400px; width: 250px; margin:0 auto; margin-top: 100px;">
+<form (ngSubmit)= "viewEmployee(empId.value)">
+    <div class="form-group">
+        <label for="name">Employee ID</label>
+        <input type="text" class="form-control" id="empId" required [(ngModel)]="employee.empId" name="empId" #empId>
+    </div>
+   
+        <!-- <button (click)="employeeDetails(employee.empId)" class="btn btn-danger">Search</button>
+    -->
+    <br> 
+    <div style="margin-top: 5%; ">
+    <button type="submit" class="btn btn-danger" value="submit">View</button>
+    </div>
+   
+</form>
+</div>

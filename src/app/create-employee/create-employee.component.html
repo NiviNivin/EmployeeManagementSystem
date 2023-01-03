@@ -1,0 +1,52 @@
+<h3 style="text-align: center;">Create Employee</h3>
+<div class="card" style="width: 700px; margin-left: 400px;">
+<div [hidden]="submitted" style="width: 300px; margin-left: 250px;">
+  <form (ngSubmit)="addEmployee(empData.value)" #empData = "ngForm">
+    <div class="form-group" style="margin-top: 5%;">
+        <label for="name">Employee ID</label>
+        <input type="text" class="form-control" id="empId" required [(ngModel)]="employee.empId" name="empId">
+    </div>
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" class="form-control" id="empName" required [(ngModel)]="employee.empName" name="empName">
+    </div>
+    <div class="form-group">
+        <label for="name">Mobile number</label>
+        <input type="text" class="form-control" id="empMob" required [(ngModel)]="employee.empMob" name="empMob">
+    </div>
+    
+    <div class="form-group">
+        <label for="name">Designation</label>
+        <input type="text" class="form-control" id="empDesg" required [(ngModel)]="employee.empDesg" name="empDesg">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Department</label>
+        <input type="text" class="form-control" id="empDept" required [(ngModel)]="employee.empDept" name="empDept">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Date of join</label>
+        <input type="text" class="form-control" id="empDoj" required [(ngModel)]="employee.empDoj" name="empDoj">
+    </div>
+    <div class="form-group">
+        <label for="name">Salary</label>
+        <input type="text" class="form-control" id="empSal" required [(ngModel)]="employee.empSal" name="empSal">
+    </div>
+    <br>
+<div style="margin-left: 110px;">
+    <!-- <button type="submit" value="Add Employee">Submit</button> -->
+    <button type="submit" class="btn btn-primary" >Submit</button>
+</div>
+</form>
+<br>
+<button class="btn btn-primary" style="margin-left: 25%; ">
+    <a routerLink="/admin" >back to dashboard</a>
+</button>
+</div>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

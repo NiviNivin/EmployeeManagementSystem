@@ -1,0 +1,33 @@
+
+<h2 style="text-align: center; margin-top: 3%;">Employee Details</h2> 
+
+<div style="height: 450px; width: 450px; margin:0 auto; border: 1px solid black; margin-top: 50px; padding-left: 100px;">
+<div *ngIf="employee">
+ 
+  <div class="sp" style="padding-top: 50px;">
+    <label><b>ID: </b></label> {{employee.empId}}
+  </div>
+  <div class="sp">
+    <label><b>Name: </b></label> {{employee.empName}}
+  </div>
+  <div class="sp">
+    <label><b>Mobile: </b></label> {{employee.empMob}}
+  </div>
+  <div class="sp">
+    <label><b>Designation: </b></label> {{employee.empDesg}}
+  </div>
+  <div class="sp">
+    <label><b>Department: </b></label> {{employee.empDept}}
+  </div>
+  <div class="sp">
+    <label><b>Date of join: </b></label> {{employee.empDoj}}
+  </div> 
+  <div class="sp">
+    <label><b>Salary: </b></label> {{employee.empSal}}
+  </div> 
+</div> 
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Dashboard</button><br>
+</div>

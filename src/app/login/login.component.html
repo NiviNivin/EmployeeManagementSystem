@@ -1,0 +1,36 @@
+
+<!-- <body style="background-color: bisque;"> -->
+
+    <div style="height: 400px; width: 450px; margin:0 auto; margin-top: 100px; border:thin solid black">
+
+        <h3 style="text-align: center; margin-top: 10%;">
+          Admin Login
+        </h3>
+
+        <div style="padding: 30px;">
+        <form #form="ngForm" (ngSubmit) = "loginAdmin(form)">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="username">Username</label>
+              <input type="text" id="username" name="username" class="form-control" [(ngModel)]= "username" />
+        
+            </div>
+          
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="password">Password</label>
+              <input type="password" id="password" name="password" class="form-control" [(ngModel)]= "password" />
+          
+            </div>
+          
+          
+            <!-- Submit button -->         
+          <div class="text-center p-2">
+              <input type="submit" class="btn btn-primary" value="Sign in">
+          </div>
+         
+          </form>
+        </div>
+    </div>
+          
+        
